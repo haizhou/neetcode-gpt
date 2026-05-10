@@ -10,4 +10,4 @@ class Solution:
             derivative = 2 * minimizier
             minimizier = minimizier - learning_rate * derivative
         
-        return round(minimizier, 5)
+        return round(minimizier, 5) 
