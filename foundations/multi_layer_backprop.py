@@ -38,7 +38,7 @@ class Solution:
 
         da1 = dz2.reshape(1, -1) @ W2  # dL/da1
         da1 = da1.flatten()
-        dz1 = da1 * (z1 > 0).astype(float)  # ReLU derivative
+        dz1 = da1 = da1 * (z1 > 0).astype(float) # ReLU derivative
         dW1 = dz1.reshape(-1, 1) @ x.reshape(1, -1)  # dL/dW1
         db1 = dz1                      # dL/db1
 
