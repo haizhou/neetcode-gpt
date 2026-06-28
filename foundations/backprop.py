@@ -17,4 +17,4 @@ class Solution:
         y_hat = 1 / (1 + np.exp(-z))
         L = 0.5 * np.square(y_hat - y_true)
         dl_db = (y_hat - y_true) * y_hat * (1 - y_hat)
-        return np.round(x * dl_db,5), np.round(dl_db, 5)
+        return np.round(x * dl_db,5), np.round(float(dl_db), 5)
