@@ -32,7 +32,7 @@ class Solution:
         dl_db2 = dl_dz2
         dl_dz1 = W2.T @ dl_dz2
         dl_dz0 = dl_dz1 * (z0 > 0).astype(float)
-        dl_db1 = dl_dz0.reshape(-1)
+        dl_db1 = dl_dz0
         dl_dw1 = np.outer(dl_dz0, x)
         return {
             'loss': round(float(l), 4),
